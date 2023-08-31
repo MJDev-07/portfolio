@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #repoSpace{ 
+            width: 200px;
+            height: 150px;
+            position: relative;
+            border-radius: 4px;
+            box-shadow: 0 3px 9px 3px rgba(0, 0, 0, 0.1);
+        }
+        .repoName
+        {
+            width:100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .serv
+        {
+            display: flex;
+            position: absolute;
+            bottom: 0;
+            list-style-type: none;
+            left: 0;
+            padding: 0 0 0 8px;
+            
+        }
+        .serv li
+        {
+            padding: 0 4px;      
+        }
+    </style>
+</head>
+<body>
+    <div class="projects">
+        <div id="repoSpace">
+            <div class="repoName">MJ</div>
+                <ul class="serv">
+                    <li>web</li>
+                    <li>GUI</li>
+                    <li>CLI</li>
+                </ul>
+        </div>
+    </div>
+
+    <div id="repoSpace">
+    </div>
+    <script>
+        let repos={
+            "web":[
+                {"projectName":"portfolio"},
+                {"projectName":"EHS"}
+            ]
+        };
+        let repoSpace=document.getElementById("projects");
+        for(let i in repos)
+        {
+            for(let j in i)
+            {
+                let repoSpace=document.createElement('div');
+                repoSpace.class='repoSpace';
+                
+            }
+        }
+    </script>
+</body>
+</html>
